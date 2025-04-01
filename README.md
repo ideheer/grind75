@@ -1,4 +1,4 @@
-[![logo](./img/lch_banner.png)](#)
+[![logo](./img/lch_bannerv2.png)](#)
 
 Grind 75 projects.
 The idea is to make steady progress with LeetCode using GitHub as a motivational tool.
