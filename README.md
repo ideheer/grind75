@@ -18,7 +18,7 @@
 
 ### <a name="hashsets">Hash Sets</a>
 
-<a name="Wiki" href="https://github.com/ideheer/grind75/wiki">Check out The Wiki</a>
+<a name="wiki" href="https://github.com/ideheer/grind75/wiki">Check out The Wiki</a>
 
 Grind 75 projects.
 The idea is to make steady progress with LeetCode using GitHub as a motivational tool.
