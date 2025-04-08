@@ -6,24 +6,28 @@ try:
 except ImportError:
     pass # In leetcode environment, we don't need to import the help file.
 
-from collections import deque
-
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        hashset = set()
-        q = deque()
-        longest = 0
-        counter = 0 
-        for char in s: 
-            curr = ''
-            if char in hashset:
-                while curr != char:
-                    curr = q.popleft()
-                    counter -= 1
-                    hashset.remove(curr)
-            q.append(char)
-            hashset.add(char)
-            counter += 1
-            if counter > longest:
-                longest = counter
-        return longest
+        hashSet = set()
+        l = 0
+        res = 0
+        for r in range(len(s)):
+            while s[r] in hashSet:
+                hashSet.remove(s[l])
+                l += 1
+            hashSet.add(s[r])
+            res = max(res, r - l + 1)
+        return(res)
+
+# def lengthOfLongestSubstring(self, s: str) -> int:
+#         hashSet = set()
+#         l = 0
+#         res = 0
+#         for r in range(len(s)):
+#             while s[r] in hashSet:
+#                 hashSet.remove(s[l])
+#                 l += 1
+#             hashSet.add(s[r])
+#             res = max(res, r - l + 1)
+#             print(f"hashSet = {hashSet}, res = {res}")
+#         return(res)
