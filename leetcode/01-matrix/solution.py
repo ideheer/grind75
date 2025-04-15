@@ -10,28 +10,29 @@ class Solution:
     def updateMatrix(self, mat: List[List[int]]) -> List[List[int]]:
         m = len(mat)
         n = len(mat[0])
-        ans = [[0] * n for _ in range(m)]
-        directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
         visited = set()
         q = deque()
-
+        directions = ((0, -1), (0, 1), (-1, 0), (1, 0))
+        answer = [[0] * n for _ in range(m)]
+        # populate queue with 0's and initiate distance
         for i in range(m):
             for j in range(n):
                 if mat[i][j] == 0:
-                    q.append((i, j))
-                    visited.add((i, j))
-        dist = 0
-        while q:
+                    q.append((i,j))
+                    visited.add((i,j))
+        distance = 0
+
+        while q:   # loop through q and pop i,j look at directions and add to q
             for _ in range(len(q)):
-                i, j = q.popleft()
-                ans[i][j] = dist
-            
+                i,j = q.popleft()
+                answer[i][j] = distance
+
                 for d in directions:
-                    new_i = i + d[0]
-                    new_j = j + d[1]
-                    if 0 <= new_i < m and 0 <= new_j < n and (new_i, new_j) not in visited:
-                        visited.add((new_i, new_j))
-                        q.append((new_i, new_j))
-            dist += 1
-        return ans
-        
+                    ni = i + d[0]
+                    nj = j + d[1]
+                    if 0 <= ni < m and 0 <= nj < m and (ni, nj) not in visited:
+                        visited.add((ni, nj))
+                        q.append((ni, nj))
+
+            distance += 1
+        return(answer)
