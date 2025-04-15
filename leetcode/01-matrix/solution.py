@@ -24,8 +24,7 @@ class Solution:
         while q:
             for _ in range(len(q)):
                 i, j = q.popleft()
-                if mat[i][j] == 1:
-                    ans[i][j] = dist
+                ans[i][j] = dist
             
                 for d in directions:
                     new_i = i + d[0]
