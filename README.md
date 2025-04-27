@@ -35,3 +35,4 @@ Link data structures to specific challenges in TOC
 Collapseable menus
 Add previously tested LeetCode challenges
 Sections related to data structures and concepts with links to relevant files
+check out https://marketplace.visualstudio.com/items?itemName=LeetCode.vscode-leetcode
