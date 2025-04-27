@@ -8,6 +8,13 @@
 - [Data Types](#data-types)
     - [Hashsets](#hashsets)
 
+## <a name="common-commands">Commmon Commands</a>
+
+### <a name="virtual">Virtualize</a>
+### source .venv/bin/activate
+### https://github.com/goodstudyqaq/leetcode-local-tester
+### leetcode-local-tester work --kind problem --language python3 --location ./leetcode/ --detail https://leetcode.com/...
+
 ## <a name="content-goes-here">Content Goes Here</a>
 
 ### <a name="more-stuff">More Stuff</a>
